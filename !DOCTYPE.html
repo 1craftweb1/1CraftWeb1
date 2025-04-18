@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1WebCraft1 - Soluciones Web Profesionales</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --dark: #1e293b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 300px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            color: var(--dark);
+            opacity: 0.7;
+        }
+        
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .contact {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .contact .container {
+            max-width: 800px;
+        }
+        
+        .contact h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .email-link {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">1WebCraft1</div>
+            <div class="tagline">Soluciones web profesionales a precios increíbles</div>
+            <a href="mailto:1webcraft1@gmail.com" class="cta-button">¡Contáctanos Ahora!</a>
+        </div>
+    </header>
+    
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios y Precios</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Página Web Básica</h3>
+                    <div class="price">$19 <span>USD</span></div>
+                    <ul class="features">
+                        <li>Diseño profesional y moderno</li>
+                        <li>Totalmente responsive (adaptable a móviles)</li>
+                        <li>1-5 secciones/páginas</li>
+                        <li>Formulario de contacto</li>
+                        <li>Optimización básica SEO</li>
+                        <li>Soporte por 1 mes</li>
+                    </ul>
+                    <a href="mailto:1webcraft1@gmail.com?subject=Quiero una página web básica por $19" class="cta-button">Solicitar</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Tienda Online</h3>
+                    <div class="price">$35 <span>USD</span></div>
+                    <ul class="features">
+                        <li>Catálogo de productos completo</li>
+                        <li>Carrito de compras funcional</li>
+                        <li>Integración con métodos de pago</li>
+                        <li>Panel de administración</li>
+                        <li>Diseño profesional y adaptable</li>
+                        <li>Soporte por 2 meses</li>
+                    </ul>
+                    <a href="mailto:1webcraft1@gmail.com?subject=Quiero una tienda online por $35" class="cta-button">Solicitar</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Página de Cobro</h3>
+                    <div class="price">$15 <span>USD</span></div>
+                    <ul class="features">
+                        <li>Página única de pago</li>
+                        <li>Integración con pasarelas de pago</li>
+                        <li>Diseño limpio y profesional</li>
+                        <li>Formulario seguro</li>
+                        <li>Optimizada para conversiones</li>
+                        <li>Soporte por 2 semanas</li>
+                    </ul>
+                    <a href="mailto:1webcraft1@gmail.com?subject=Quiero una página de cobro por $15" class="cta-button">Solicitar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <div class="container">
+            <h2>¿Listo para llevar tu presencia online al siguiente nivel?</h2>
+            <p>Contáctanos hoy mismo y obtén una página web profesional que impulse tu negocio. Nuestro equipo está listo para ayudarte a crear exactamente lo que necesitas.</p>
+            <a href="mailto:1webcraft1@gmail.com" class="email-link">1webcraft1@gmail.com</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 1WebCraft1. Todos los derechos reservados.</p>
+            <p>Soluciones web profesionales a precios accesibles.</p>
+        </div>
+    </footer>
+</body>
+</html>
